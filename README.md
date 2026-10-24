@@ -1,17 +1,55 @@
-# wildlife_sanctuary_guide
+# Wildlife Sanctuary Guide
 
-A new Flutter project.
+A Flutter and Dart wildlife sanctuary guide promoting wildlife conservation and SDG awareness.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Home screen with featured wildlife sanctuaries
+- Searchable sanctuary directory with detailed information
+- Animal species information and conservation status
+- Explore destinations using Google Maps
+- Save favorite sanctuaries and animals
+- Conservation awareness and Sustainable Development Goals information
 
-A few resources to get you started if this is your first Flutter project:
+## Technologies Used
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Flutter
+- Dart
+- Material 3
+- Shared Preferences
+- URL Launcher
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Requirements
+
+- Flutter SDK
+- Visual Studio Code
+- Google Chrome
+- Git
+
+## Run the Project
+
+Open the project folder in VS Code and execute:
+
+```bash
+flutter pub get
+flutter run -d chrome
+```
+
+## Run Tests
+
+```bash
+flutter analyze
+flutter test
+```
+
+## Sustainable Development Goals
+
+This project promotes awareness of:
+
+- SDG 15: Life on Land
+- SDG 13: Climate Action
+- SDG 6: Clean Water and Sanitation
+
+## Project Purpose
+
+The project demonstrates Flutter navigation, separate screens, searchable wildlife information, locally saved favorites, and conservation awareness.
