@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import '../data/sample_data.dart';
@@ -53,7 +54,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
   Future<void> _toggleFavorite(Animal animal) async {
     try {
       await FavoritesService.toggleAnimalFavorite(animal.id);
-      final updatedFavorites = await FavoritesService.getAnimalFavorites();
+      final updatedFavorites =
+          await FavoritesService.getAnimalFavorites();
 
       if (!mounted) return;
 
@@ -182,11 +184,18 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
             ),
             child: const Column(
               children: [
-                Icon(Icons.search_off, size: 42, color: AppTheme.textSecondary),
+                Icon(
+                  Icons.search_off,
+                  size: 42,
+                  color: AppTheme.textSecondary,
+                ),
                 SizedBox(height: 12),
                 Text(
                   'No species found',
-                  style: TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
                 SizedBox(height: 6),
                 Text(
@@ -211,7 +220,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
                     MaterialPageRoute<void>(
                       builder: (_) => AnimalDetailScreen(
                         animal: animal,
-                        initiallyFavorite: _favoriteIds.contains(animal.id),
+                        initiallyFavorite:
+                            _favoriteIds.contains(animal.id),
                       ),
                     ),
                   );
@@ -274,9 +284,13 @@ class _AnimalCard extends StatelessWidget {
                   width: double.infinity,
                   child: Image.network(
                     animal.imageUrl,
+                    width: double.infinity,
+                    height: 190,
                     fit: BoxFit.cover,
                     errorBuilder: (context, error, stackTrace) {
                       return Container(
+                        width: double.infinity,
+                        height: 190,
                         color: AppTheme.cream,
                         alignment: Alignment.center,
                         child: const Icon(
@@ -300,7 +314,9 @@ class _AnimalCard extends StatelessWidget {
                           : 'Add to favorites',
                       onPressed: onFavoriteTap,
                       icon: Icon(
-                        isFavorite ? Icons.bookmark : Icons.bookmark_border,
+                        isFavorite
+                            ? Icons.bookmark
+                            : Icons.bookmark_border,
                         color: AppTheme.forestGreen,
                       ),
                     ),
@@ -375,7 +391,10 @@ class _AnimalCard extends StatelessWidget {
 }
 
 class _InfoTag extends StatelessWidget {
-  const _InfoTag({required this.icon, required this.label});
+  const _InfoTag({
+    required this.icon,
+    required this.label,
+  });
 
   final IconData icon;
   final String label;
@@ -396,7 +415,10 @@ class _InfoTag extends StatelessWidget {
           Flexible(
             child: Text(
               label,
-              style: const TextStyle(fontSize: 12, color: AppTheme.textPrimary),
+              style: const TextStyle(
+                fontSize: 12,
+                color: AppTheme.textPrimary,
+              ),
             ),
           ),
         ],
@@ -457,9 +479,13 @@ class _AnimalDetailScreenState extends State<AnimalDetailScreen> {
         title: Text(animal.name),
         actions: [
           IconButton(
-            tooltip: _isFavorite ? 'Remove from favorites' : 'Add to favorites',
+            tooltip: _isFavorite
+                ? 'Remove from favorites'
+                : 'Add to favorites',
             onPressed: _toggleFavorite,
-            icon: Icon(_isFavorite ? Icons.bookmark : Icons.bookmark_border),
+            icon: Icon(
+              _isFavorite ? Icons.bookmark : Icons.bookmark_border,
+            ),
           ),
         ],
       ),
@@ -470,12 +496,13 @@ class _AnimalDetailScreenState extends State<AnimalDetailScreen> {
             borderRadius: BorderRadius.circular(18),
             child: Image.network(
               animal.imageUrl,
-              height: 240,
               width: double.infinity,
+              height: 280,
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) {
                 return Container(
-                  height: 240,
+                  width: double.infinity,
+                  height: 280,
                   color: AppTheme.cream,
                   alignment: Alignment.center,
                   child: const Icon(
@@ -510,8 +537,14 @@ class _AnimalDetailScreenState extends State<AnimalDetailScreen> {
             title: 'About this species',
             content: animal.description,
           ),
-          _DetailSection(title: 'Habitat', content: animal.habitat),
-          _DetailSection(title: 'Category', content: animal.category),
+          _DetailSection(
+            title: 'Habitat',
+            content: animal.habitat,
+          ),
+          _DetailSection(
+            title: 'Category',
+            content: animal.category,
+          ),
           _DetailSection(
             title: 'Conservation status',
             content: animal.conservationStatus,
@@ -533,7 +566,10 @@ class _AnimalDetailScreenState extends State<AnimalDetailScreen> {
 }
 
 class _DetailSection extends StatelessWidget {
-  const _DetailSection({required this.title, required this.content});
+  const _DetailSection({
+    required this.title,
+    required this.content,
+  });
 
   final String title;
   final String content;

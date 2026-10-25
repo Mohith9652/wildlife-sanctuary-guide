@@ -168,9 +168,13 @@ class _DestinationCard extends StatelessWidget {
             height: 175,
             child: Image.network(
               sanctuary.imageUrl,
+              width: double.infinity,
+              height: 175,
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) {
                 return Container(
+                  width: double.infinity,
+                  height: 175,
                   color: AppTheme.cream,
                   alignment: Alignment.center,
                   child: const Icon(

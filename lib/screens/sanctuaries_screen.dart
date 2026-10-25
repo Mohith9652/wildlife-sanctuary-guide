@@ -425,12 +425,13 @@ class _SanctuaryDetailScreenState extends State<SanctuaryDetailScreen> {
         children: [
           Image.network(
             sanctuary.imageUrl,
-            height: 250,
             width: double.infinity,
+            height: 280,
             fit: BoxFit.cover,
             errorBuilder: (_, error, stackTrace) {
               return Container(
-                height: 250,
+                width: double.infinity,
+                height: 280,
                 color: const Color(0xFFE6EDE1),
                 child: const Icon(
                   Icons.forest,

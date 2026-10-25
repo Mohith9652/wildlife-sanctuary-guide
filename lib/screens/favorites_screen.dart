@@ -310,9 +310,13 @@ class _FavoriteCard extends StatelessWidget {
             height: 112,
             child: Image.network(
               imageUrl,
+              width: 104,
+              height: 112,
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) {
                 return Container(
+                  width: 104,
+                  height: 112,
                   color: AppTheme.cream,
                   alignment: Alignment.center,
                   child: Icon(icon, size: 34, color: AppTheme.leafGreen),
