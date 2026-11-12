@@ -1,0 +1,106 @@
+import '../models/animal.dart';
+import '../models/sanctuary.dart';
+
+const List<Sanctuary> sampleSanctuaries = [
+  Sanctuary(
+    id: 'kaziranga',
+    name: 'Kaziranga National Park',
+    location: 'Golaghat and Nagaon',
+    state: 'Assam',
+    description: 'Kaziranga is known for its population of the greater one-horned rhinoceros. Its grasslands and wetlands support many other species.',
+    imageUrl: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1000&q=80',
+    highlights: [
+      'Greater one-horned rhinoceros',
+      'Grassland ecosystem',
+      'Wetland birds',
+    ],
+  ),
+  Sanctuary(
+    id: 'gir',
+    name: 'Gir National Park',
+    location: 'Junagadh district',
+    state: 'Gujarat',
+    description: 'Gir is an important protected landscape for the Asiatic lion and supports diverse dry deciduous forest wildlife.',
+    imageUrl: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1000&q=80',
+    highlights: [
+      'Asiatic lion',
+      'Dry deciduous forest',
+      'Wildlife conservation',
+    ],
+  ),
+  Sanctuary(
+    id: 'periyar',
+    name: 'Periyar Wildlife Sanctuary',
+    location: 'Thekkady',
+    state: 'Kerala',
+    description: 'Periyar protects forest and lake habitats in the Western Ghats. The area is known for elephants and rich biodiversity.',
+    imageUrl: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?auto=format&fit=crop&w=1000&q=80',
+    highlights: [
+      'Asian elephant',
+      'Lake and forest habitats',
+      'Western Ghats biodiversity',
+    ],
+  ),
+  Sanctuary(
+    id: 'sundarbans',
+    name: 'Sundarbans National Park',
+    location: 'South 24 Parganas',
+    state: 'West Bengal',
+    description: 'The Sundarbans is a mangrove landscape shaped by tidal waterways and is an important habitat for the Bengal tiger.',
+    imageUrl: 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=80',
+    highlights: ['Mangrove forests', 'Bengal tiger', 'Tidal waterways'],
+  ),
+];
+
+const List<Animal> sampleAnimals = [
+  Animal(
+    id: 'tiger',
+    name: 'Bengal Tiger',
+    scientificName: 'Panthera tigris tigris',
+    category: 'Mammal',
+    habitat: 'Forests, grasslands and mangroves',
+    description: 'The Bengal tiger is a large carnivore with a striped coat. Protecting its habitat helps conserve many other species.',
+    imageUrl: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1000&q=80',
+    conservationStatus: 'Endangered',
+  ),
+  Animal(
+    id: 'elephant',
+    name: 'Asian Elephant',
+    scientificName: 'Elephas maximus',
+    category: 'Mammal',
+    habitat: 'Tropical forests and grasslands',
+    description: 'Asian elephants are intelligent social animals that help shape forest ecosystems and disperse seeds.',
+    imageUrl: 'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=1000&q=80',
+    conservationStatus: 'Endangered',
+  ),
+  Animal(
+    id: 'rhino',
+    name: 'Greater One-Horned Rhinoceros',
+    scientificName: 'Rhinoceros unicornis',
+    category: 'Mammal',
+    habitat: 'Floodplain grasslands and wetlands',
+    description: 'This rhinoceros is recognized by its single horn and thick folded skin. Protected grasslands and wetlands are vital to its survival.',
+    imageUrl: 'https://images.unsplash.com/photo-1589656966895-2f33e7653819?auto=format&fit=crop&w=1000&q=80',
+    conservationStatus: 'Vulnerable',
+  ),
+  Animal(
+    id: 'lion',
+    name: 'Asiatic Lion',
+    scientificName: 'Panthera leo persica',
+    category: 'Mammal',
+    habitat: 'Dry deciduous forest and scrub',
+    description: 'The Asiatic lion survives in the wild in and around the Gir landscape of Gujarat. Habitat protection is essential for its future.',
+    imageUrl: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1000&q=80',
+    conservationStatus: 'Endangered',
+  ),
+  Animal(
+    id: 'peacock',
+    name: 'Indian Peafowl',
+    scientificName: 'Pavo cristatus',
+    category: 'Bird',
+    habitat: 'Open forests, scrub and farmland',
+    description: 'The Indian peafowl is known for the male bird’s colourful display feathers and occurs across many parts of the Indian subcontinent.',
+    imageUrl: 'https://images.unsplash.com/photo-1591608971362-f08b2a75731a?auto=format&fit=crop&w=1000&q=80',
+    conservationStatus: 'Least Concern',
+  ),
+];
